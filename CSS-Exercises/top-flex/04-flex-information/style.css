@@ -24,3 +24,37 @@ body {
     justify-content: center;
     background: #eee;
   }
+  /*SOLUTION*/
+  .body{
+    text-align: center;
+  }
+  .title{
+    display: flex;
+    justify-content: center;
+    margin: 32px;
+  }
+  .p1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+  }
+  .v1{
+    max-width: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+  /*SOL DAC*/
+  /* .title {
+    margin-bottom: 32px;
+  }
+  
+  .p1 {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+  }
+  
+  .v1 {
+    max-width: 200px;
+  } */

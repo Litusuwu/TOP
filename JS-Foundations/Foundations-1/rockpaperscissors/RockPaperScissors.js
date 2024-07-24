@@ -83,3 +83,4 @@ function round(){
         alert(`EMPATE. \nComputadora - [${scoreComputadora}] VS [${scoreUsuario}] - Usuario`)
     }
 }
+round();

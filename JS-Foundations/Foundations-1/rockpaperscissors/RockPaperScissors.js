@@ -1,4 +1,4 @@
-let v1, v2, v3;
+let v1, v2, v3, scoreUsuario = 0, scoreComputadora = 0 ;
 function values(){
     const opciones = `Por favor, ingresa tu opcion (numero)
     1. Piedra
@@ -42,25 +42,44 @@ function jugar(){
 
     if(v3 == 'Piedra' && v2 == 'Papel'){
         ans = 'Ganaste.';
+        scoreUsuario++;
     }
     else if(v3 == 'Piedra' && v2 == 'Tijeras'){
         ans = 'Perdiste.';
+        scoreComputadora++;
     }
     else if(v3 == 'Papel' && v2 == 'Tijeras'){
         ans = 'Ganaste.';
+        scoreUsuario++;
     }
     else if(v3 == 'Papel' && v2 == 'Piedra'){
         ans = 'Perdiste.';
+        scoreComputadora++;
     }
     else if(v3 == 'Tijeras' && v2 == 'Piedra'){
         ans = 'Ganaste.';
+        scoreUsuario++;
     }
     else if(v3 == 'Tijeras' && v2 == 'Papel'){
         ans = 'Perdiste.';
+        scoreComputadora++;
     }
     else{
         ans = 'Empate.';
     }
-    alert(`${ans} \nComputadora [${v3}] VS [${v2}] Usuario`)
+    alert(`${ans} \nComputadora [${v3}]  - [${scoreComputadora}] VS [${scoreUsuario}] - [${v2}] Usuario`)
 }
-values();
+function round(){
+    for(let i = 0 ; i < 5 ; i++){
+        values();
+    }
+    if(scoreComputadora > scoreUsuario){
+        alert(`PERDISTE. \nComputadora - [${scoreComputadora}] VS [${scoreUsuario}] - Usuario`)
+    }
+    else if(scoreComputadora < scoreUsuario){
+        alert(`GANASTE. \nComputadora - [${scoreComputadora}] VS [${scoreUsuario}] - Usuario`)
+    }
+    else{
+        alert(`EMPATE. \nComputadora - [${scoreComputadora}] VS [${scoreUsuario}] - Usuario`)
+    }
+}

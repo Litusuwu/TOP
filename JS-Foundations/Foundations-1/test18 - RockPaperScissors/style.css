@@ -1,11 +1,15 @@
 body{
     /* background-color: rgb(70, 171, 226); */
-    background: linear-gradient(to right, rgb(135, 229, 255), rgb(41, 176, 248));
-
+    /*background: linear-gradient(to right, rgb(135, 229, 255), rgb(41, 176, 248));*/
+    /* D background: linear-gradient(to right, rgb(249, 155, 155), rgb(179, 44, 44)); */
+    /* V background: linear-gradient(to right, rgb(175, 255, 172), rgb(78, 196, 90)); */
+    background-color: rgb(135, 229, 255);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: background-color 0.9s ease; /* Transición suave */
+    /* color: #333; Color del texto para contraste */
 }
 img{
     width: 100px;

@@ -1,9 +1,14 @@
 const btn = document.querySelectorAll('img');
 const resetear = document.querySelector('.botoncin');
+let strenD = 'rgb(249, 155, 155)';
+let strenV = 'rgb(175, 255, 172)';
+let strenE = ' rgb(135, 229, 255)';
 let v1, v2, v3, scoreUsuario = 0, scoreComputadora = 0, ans, flag = false;
 
 function jugar(){
     let num = Math.floor(Math.random()*3) ;
+    const bodisin = document.querySelector('body');
+    
     switch(num){
         case 0:
             v3 = "Piedra";
@@ -19,29 +24,37 @@ function jugar(){
     }
     if(v3 == 'Piedra' && v2 == 'Papel'){
         ans = 'Ganaste.';
+        bodisin.style.backgroundColor = strenV;
         scoreUsuario++;
     }
     else if(v3 == 'Piedra' && v2 == 'Tijeras'){
         ans = 'Perdiste.';
+        
+        bodisin.style.backgroundColor = strenD;
         scoreComputadora++;
     }
     else if(v3 == 'Papel' && v2 == 'Tijeras'){
         ans = 'Ganaste.';
+        bodisin.style.backgroundColor = strenV;
         scoreUsuario++;
     }
     else if(v3 == 'Papel' && v2 == 'Piedra'){
         ans = 'Perdiste.';
+        bodisin.style.backgroundColor = strenD;
         scoreComputadora++;
     }
     else if(v3 == 'Tijeras' && v2 == 'Piedra'){
         ans = 'Ganaste.';
+        bodisin.style.backgroundColor = strenV;
         scoreUsuario++;
     }
     else if(v3 == 'Tijeras' && v2 == 'Papel'){
         ans = 'Perdiste.';
+        bodisin.style.backgroundColor = strenD;
         scoreComputadora++;
     }
     else{
+        bodisin.style.backgroundColor = strenE;
         ans = 'Empate.';
     }
 }
@@ -53,6 +66,7 @@ function reset(){
     const puntCompu = document.querySelector('#pCompu');
     const titulo = document.querySelector('.tit2');
     const vered = document.querySelector('.veredicto');
+    const bodisin = document.querySelector('body');
     vered.textContent = '';
     parrafoJugador.textContent = "Selecciona tu opción";
     parrafoCompu.textContent = "";
@@ -62,6 +76,7 @@ function reset(){
     puntCompu.textContent = scoreComputadora;
     puntJugador.textContent = scoreUsuario;
     titulo.textContent = "Selecciona una opción para iniciar, gana 10 puntos!";
+    bodisin.style.backgroundColor = strenE;
 }
 btn.forEach(butonsin => {
     

@@ -1,0 +1,28 @@
+.itema{
+    grid-area: header;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+.itemb{
+    grid-area: menu;
+    background-color: #9b6767;
+    text-align: center;
+    padding: 10px;
+}
+.itemc{
+    grid-area: sidebar;
+    background-color: #460c0c;
+}
+.itemc{
+    grid-area: footer;
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header" "menu menu . sidebar" "footer footer footer footer";
+}
